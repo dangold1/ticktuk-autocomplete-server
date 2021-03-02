@@ -1,1 +1,1 @@
-### ticktuk-autocomplete-server
+### Simple Autocomplete Server Service
