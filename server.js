@@ -3,15 +3,17 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
+const { getSearchResults } = require('./services');
 
-//----------------------------------Middlewares Router-------------------------------------
+//----------------------------------Middlewares-------------------------------------
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-// Autocomplete service
-app.post('/api/autocomplete', getSearchResults);
+//----------------------------------Routes-------------------------------------
 
+// Search service
+app.post('/api/countries', getSearchResults);
 
 //----------------------------------Run Server---------------------------------------------
 
